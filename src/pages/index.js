@@ -57,7 +57,10 @@ const HomeIndex = () => {
           </p>
           <div className="row">
             <div className="8u 12u$(small)">
-              <form name="contact" method="POST" data-netlify="true">
+              <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                <p class="hidden">
+                  <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                </p>
                 <div className="row uniform 50%">
                   <div className="6u 12u$(xsmall)">
                     <input
