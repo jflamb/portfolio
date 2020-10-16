@@ -1,0 +1,126 @@
+{
+  CompanyId: '4d09a1be-6416-4a7d-bb39-712c7c40f4f4',
+  SourceId: '3491fd10-6959-44a0-8ceb-080de94ba684',
+  Path: './src/itly',
+  Version: '3.0.0',
+  Events: [
+    {
+      id: 'e0ae1dee-e3fc-4326-bbd2-b65d8ecc2d7b',
+      name: 'Account Created',
+      description: 'New account is created.',
+      properties: [
+        {
+          id: '2a5b6014-4ffd-411e-ad94-0298c3351322',
+          name: 'plan',
+          description: 'The plan chosen when the account was created.',
+          required: true,
+          type: '5',
+          schema: {
+            enum: [
+              'free',
+              'premium',
+              'trial',
+            ],
+          },
+        },
+      ],
+      sources: [
+        {
+          id: '3491fd10-6959-44a0-8ceb-080de94ba684',
+          name: 'browser',
+        },
+      ],
+    },
+    {
+      id: '89dbcaf0-bcfd-42c3-b85a-411819039527',
+      name: 'Account Deactivated',
+      description: 'Account is deactivated and no longer available.',
+      properties: [
+        {
+          id: '6d774b3c-e61f-45a2-bad3-c0ffd3ae397b',
+          name: 'reason',
+          description: 'The reason given to deactivate the account.',
+          required: true,
+          type: '5',
+          schema: {
+            enum: [
+              'no longer needed',
+              'price',
+              'duplicate account',
+            ],
+          },
+        },
+      ],
+      sources: [
+        {
+          id: '3491fd10-6959-44a0-8ceb-080de94ba684',
+          name: 'browser',
+        },
+      ],
+    },
+    {
+      id: 'cf759345-0a66-4cc4-8993-40bbbe9dd0b0',
+      name: 'Invite Sent',
+      description: 'User invites another user into an account.',
+      properties: [
+        {
+          id: 'e34a663a-d138-4e52-9b1a-ec34feb04a0d',
+          name: 'inviteeRole',
+          description: 'The role associated with this invited user.',
+          required: true,
+          type: '5',
+          schema: {
+            enum: [
+              'admin',
+              'editor',
+              'viewer',
+            ],
+          },
+        },
+      ],
+      sources: [
+        {
+          id: '3491fd10-6959-44a0-8ceb-080de94ba684',
+          name: 'browser',
+        },
+      ],
+    },
+    {
+      id: '7065f1a6-3145-418d-b451-dfac41cc33dc',
+      name: 'User Signed In',
+      description: 'User signs in to the app.',
+      properties: [],
+      sources: [
+        {
+          id: '3491fd10-6959-44a0-8ceb-080de94ba684',
+          name: 'browser',
+        },
+      ],
+    },
+    {
+      id: '228b5533-ff6a-4b69-bdf0-163444d73737',
+      name: 'User Signed Out',
+      description: 'User signs out of the app.',
+      properties: [],
+      sources: [
+        {
+          id: '3491fd10-6959-44a0-8ceb-080de94ba684',
+          name: 'browser',
+        },
+      ],
+    },
+    {
+      id: '625b3fce-318d-4d56-9930-aeefeb7aa89b',
+      name: 'User Signed Up',
+      description: 'User joins an existing account or creates a new account.',
+      properties: [],
+      sources: [
+        {
+          id: '3491fd10-6959-44a0-8ceb-080de94ba684',
+          name: 'browser',
+        },
+      ],
+    },
+  ],
+  Branch: 'master',
+}

@@ -1,8 +1,17 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import itly from './src/itly';
 
 import Gallery from '../components/Gallery'
 import Layout from '../components/layout'
+
+itly.load({ environment: 'development' });
+itly.userSignedIn({ platform: 'browser' });
+itly.userSignedOut({ platform: 'browser' });
+itly.userSignedUp({ platform: 'browser' });
+itly.accountCreated({ platform: 'browser' });
+itly.accountDeactivated({ platform: 'browser' });
+itly.inviteSent({ platform: 'browser' });
 
 const HomeIndex = () => {
   const siteTitle = 'Jim Lamb'
